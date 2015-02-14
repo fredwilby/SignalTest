@@ -1,0 +1,12 @@
+/*
+ * Copyright (c) Fred Wilby 2015. All rights reserved
+ */
+
+apply plugin: 'java'
+
+task(run, dependsOn: 'classes', type:JavaExec) {
+    main = 'SignalGraph'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+defaultTaks 'run'
